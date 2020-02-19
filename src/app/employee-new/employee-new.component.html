@@ -1,0 +1,18 @@
+<label for="">Nome: </label>
+<input type="text" [(ngModel)]="employee.name"> <!-- Two way data binding-->
+<br>
+<label for="">Salario: </label>
+<input type="text" [(ngModel)]="employee.salary"> <!-- Two way data binding-->
+<br>
+<!-- <div *ngIf="salary < 1000">
+    <label for="">Bonus: </label>
+    <input type="text" [(ngModel)]="bonus">
+</div> --> 
+<div [hidden]="employee.salary >= 1000">
+    <label for="">Bonus: </label>
+    <input type="text" [(ngModel)]="employee.bonus"> <!-- Two way data binding-->
+</div>
+
+
+<br><br>
+<button type="button" (click)="addEmployee($event)">Adcionar o empregado</button>
